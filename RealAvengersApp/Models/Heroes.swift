@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class Heroes: Character {
+    
+    override init(name: String,image: String, description: String, nickName: String ) {
+        
+        super.init(name: name, image: image, description: description, nickName: nickName)    
+        
+        
+     }
+    
+}

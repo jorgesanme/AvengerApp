@@ -9,7 +9,7 @@ import UIKit
 
 class VillainsDetailViewController: UIViewController{
     
-//    @IBOutlet var name: UILabel?
+    @IBOutlet var name: UILabel?
     @IBOutlet var image: UIImageView?
     @IBOutlet var nickName: UILabel?
     @IBOutlet var backTextcellView: UIView?
@@ -22,7 +22,7 @@ class VillainsDetailViewController: UIViewController{
     
     
     
-//    weak var delegate: DetailViewController? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class VillainsDetailViewController: UIViewController{
         image?.image = UIImage(named: VillainDetailData!.image )
        
 
-////        name?.text =  hero.name
+        name?.text =  VillainDetailData?.name
         nickName?.text = VillainDetailData?.nickName
         descritionView?.text = VillainDetailData?.description
         self.title =  VillainDetailData?.name
@@ -54,15 +54,8 @@ class VillainsDetailViewController: UIViewController{
         nickName?.text = nil
         image?.image = nil
         descritionView?.text = nil
+        name?.text = nil
         
-    }
-    
-    func configureView(character: Character){
-        
-        image?.image = UIImage(named: VillainDetailData?.image ?? "")
-        nickName?.text = character.nickName
-        descritionView?.text = character.description
-        navigationController?.title = character.name
     }
     
     @IBAction func onReturnPressed(_ sender: UIButton) {

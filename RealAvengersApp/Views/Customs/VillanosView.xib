@@ -1,18 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VillainsCollectionCellView" rowHeight="270" id="RJ8-KU-EZO">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="270"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RJ8-KU-EZO" id="JoA-Jr-TMT" customClass="VillainsCollectionCellView" customModule="RealAvengersApp" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="410" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZW-lM-Q54">
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="270"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_villain_hela" translatesAutoresizingMaskIntoConstraints="NO" id="5TY-ss-jRa">
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="270"/>
+                            </imageView>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gd-wf-QDi">
+                                <rect key="frame" x="0.0" y="200" width="410" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WPy-tb-gsQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pp-kM-RxZ">
+                                                <rect key="frame" x="177" y="0.0" width="56" height="36.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Name">
+                                                        <attributes>
+                                                            <font key="NSFont" size="20" name="Copperplate-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gll-W1-Amn">
+                                                <rect key="frame" x="161.5" y="52.5" width="87" height="17.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17.5" id="0my-Ln-fha"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="NickName">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="Copperplate-Bold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WPy-tb-gsQ" secondAttribute="bottom" id="7Fl-9o-uYM"/>
+                                    <constraint firstItem="WPy-tb-gsQ" firstAttribute="leading" secondItem="9gd-wf-QDi" secondAttribute="leading" id="8iH-Ct-dTf"/>
+                                    <constraint firstItem="WPy-tb-gsQ" firstAttribute="top" secondItem="9gd-wf-QDi" secondAttribute="top" id="Uzf-cE-WCk"/>
+                                    <constraint firstAttribute="trailing" secondItem="WPy-tb-gsQ" secondAttribute="trailing" id="gG6-uq-3qf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9gd-wf-QDi" firstAttribute="top" secondItem="4ZW-lM-Q54" secondAttribute="top" constant="200" id="2Hx-GE-ZYn"/>
+                            <constraint firstAttribute="trailing" secondItem="5TY-ss-jRa" secondAttribute="trailing" id="73u-4D-Bgn"/>
+                            <constraint firstItem="5TY-ss-jRa" firstAttribute="top" secondItem="4ZW-lM-Q54" secondAttribute="top" id="9Lg-D5-doe"/>
+                            <constraint firstAttribute="trailing" secondItem="9gd-wf-QDi" secondAttribute="trailing" id="Asq-bJ-nbN"/>
+                            <constraint firstItem="9gd-wf-QDi" firstAttribute="leading" secondItem="4ZW-lM-Q54" secondAttribute="leading" id="KDE-VR-64p"/>
+                            <constraint firstAttribute="bottom" secondItem="5TY-ss-jRa" secondAttribute="bottom" id="Lv4-qN-GzC"/>
+                            <constraint firstAttribute="bottom" secondItem="9gd-wf-QDi" secondAttribute="bottom" id="RlI-TB-XK2"/>
+                            <constraint firstItem="5TY-ss-jRa" firstAttribute="centerY" secondItem="4ZW-lM-Q54" secondAttribute="centerY" id="dvc-Cd-2FW"/>
+                            <constraint firstItem="5TY-ss-jRa" firstAttribute="leading" secondItem="4ZW-lM-Q54" secondAttribute="leading" id="mia-xa-QCj"/>
+                            <constraint firstItem="5TY-ss-jRa" firstAttribute="centerX" secondItem="4ZW-lM-Q54" secondAttribute="centerX" id="sxd-4B-CJg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4ZW-lM-Q54" secondAttribute="trailing" id="45B-wd-VIc"/>
+                    <constraint firstItem="4ZW-lM-Q54" firstAttribute="leading" secondItem="JoA-Jr-TMT" secondAttribute="leading" id="BiA-ka-Eb1"/>
+                    <constraint firstItem="4ZW-lM-Q54" firstAttribute="top" secondItem="JoA-Jr-TMT" secondAttribute="top" id="DC0-s0-kQy"/>
+                    <constraint firstAttribute="bottom" secondItem="4ZW-lM-Q54" secondAttribute="bottom" id="hln-Gw-9FC"/>
+                </constraints>
+                <connections>
+                    <outlet property="bottonViewText" destination="WPy-tb-gsQ" id="qou-tZ-fRW"/>
+                    <outlet property="cellView" destination="4ZW-lM-Q54" id="Ykb-mo-V1m"/>
+                    <outlet property="image" destination="5TY-ss-jRa" id="hbF-J4-A4e"/>
+                    <outlet property="name" destination="6Pp-kM-RxZ" id="utr-4d-yiD"/>
+                    <outlet property="nickName" destination="Gll-W1-Amn" id="YSv-7v-5I5"/>
+                </connections>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-44.927536231884062" y="127.23214285714285"/>
+        </tableViewCell>
     </objects>
+    <resources>
+        <image name="img_villain_hela" width="223.33332824707031" height="138"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+class  Character {
+    
+    var name: String = ""
+    var image: String = ""
+    var description: String = ""
+    var nickName: String = ""
+    
+    init(name: String, image:String, description:String, nickName:String) {
+       
+        self.name = name
+        self.image = image
+        self.description = description
+        self.nickName = nickName
+        
+    }
+    
+}
